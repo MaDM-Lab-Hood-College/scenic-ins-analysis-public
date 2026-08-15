@@ -1,0 +1,35 @@
+# we use posix paths, expecting scripts to be run in a docker container
+rootdir: ""
+savedir: "analysis_results/Experiment1/"
+
+experiment_name: "Experiment 1"
+
+input_paths:
+  pc_data: "data/experiment1.csv"
+
+variables:
+  predictors:
+    column: [Ins, Cond]
+    semantic: [Instructions, "Stimulus Class"]
+  pid:
+    column: participant_id
+    semantic: "Participant ID"
+  response:
+    pc:
+      column: pc
+      semantic: "p(c)"
+
+mcmc_config:
+    cores: 16
+    chains: 16
+    tune: 1000
+    draws: 2000
+
+pc_analysis:
+  mcmc_chains: "mcmc_chains_pc.nc"
+  mcmc_summary: "mcmc_summary_pc.csv"
+  posterior_summary: "posterior_summary_pc.csv"
+  posterior_effects: "posterior_effects_pc.csv"
+  prior_plot: "prior_pc.png"
+
+seed: 42

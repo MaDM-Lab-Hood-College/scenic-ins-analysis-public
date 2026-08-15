@@ -1,0 +1,8 @@
+pymc==5.22.0
+pytensor
+graphviz
+PyYAML
+jupyter
+notebook
+ipykernel
+seaborn

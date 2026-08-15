@@ -1,0 +1,31 @@
+{
+    "name": "ScenicIns Data Analysis",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "USERNAME": "${localEnv:USER}"
+        }
+    },
+    "initializeCommand": "echo \"USERNAME=$USER\nUSER_UID=$(id -u $USER)\nGROUPNAME=$(id -gn $USER | sed 's/ /_/g')\nGROUP_GID=$(id -g $USER)\" > .devcontainer/.env",
+
+	"containerEnv": {
+		"SHELL": "/bin/bash"
+	},
+
+    "customizations": {
+		"vscode": {
+			 "extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-python.debugpy",
+				"ms-toolsai.jupyter",
+				"ms-azuretools.vscode-docker"
+			],
+			"settings": {
+				"python.defaultInterpreterPath": "/usr/local/bin/python"
+			}
+		}
+	},
+
+	"remoteUser": "${localEnv:USER}"
+}
