@@ -4,6 +4,7 @@ A Python library supporting Bayesian data analysis for the paper
 "Speed and Accuracy Instructions Invert Effects of Stimulus Class on 2AFC Recognition"
 by [M. B. Moreland](https://github.com/moreland-hood) 
 and [J. M. Dusel](https://johnmdusel.github.io/).
+Stimuli for the experiments are in the [scenic-ins-materials](https://github.com/MaDM-Lab-Hood-College/scenic-ins-materials) repository.
 
 
 To build a container for running analyses, execute these commands in a terminal session inside this folder:
